@@ -2,6 +2,7 @@ package chapter17;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,6 +36,18 @@ public class HelloServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<body>");
 		out.println("<h1>Servlet 요청 </h1>");
+		out.println("<p>서버시간" + new Date() + "</p>");
+		
+		out.println("<ul>");
+		
+		for (int i = 0; i < 5; i++) {
+			out.println("<li>" + i + "</li>");
+		}
+		
+		
+		out.println("</ul>");
+		
+		
 		out.println("</body>");
 	}
 
