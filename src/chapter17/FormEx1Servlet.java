@@ -30,9 +30,11 @@ public class FormEx1Servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("formex1 get 메소드");
-		response.setContentType("text/html; charset='utf-8'"); 
+		response.setContentType("text/html; charset=utf-8"); 
 		PrintWriter out = response.getWriter();
 		out.println("<h1>GET 방식으로 요청받음</h1>");
+		String value = request.getParameter("name");
+		out.println("<h2>받은 name의 값은:" +value +"</h2>");
 		
 	}
 	
@@ -44,9 +46,11 @@ public class FormEx1Servlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("formex1 post 메소드");
-		response.setContentType("text/html; charset='utf-8'"); 
+		response.setContentType("text/html; charset=utf-8"); 
 		PrintWriter out = response.getWriter();
 		out.println("<h1>POST 방식으로 요청받음</h1>");
+		String value = request.getParameter("name");
+		out.println("<h2>받은 name의 값은:" +value +"</h2>");
 	}
 
 }
