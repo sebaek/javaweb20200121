@@ -1,6 +1,8 @@
 package chapter17;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,8 +30,13 @@ public class FormEx1Servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("formex1 get 메소드");
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html; charset='utf-8'"); 
+		PrintWriter out = response.getWriter();
+		out.println("<h1>GET 방식으로 요청받음</h1>");
+		
 	}
+	
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -37,7 +44,18 @@ public class FormEx1Servlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("formex1 post 메소드");
-		doGet(request, response);
+		response.setContentType("text/html; charset='utf-8'"); 
+		PrintWriter out = response.getWriter();
+		out.println("<h1>POST 방식으로 요청받음</h1>");
 	}
 
 }
+
+
+
+
+
+
+
+
+
