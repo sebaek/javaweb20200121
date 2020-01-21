@@ -2,6 +2,7 @@ package chapter17;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,6 +37,15 @@ public class FormEx1Servlet extends HttpServlet {
 		String value = request.getParameter("name");
 		out.println("<h2>받은 name의 값은:" +value +"</h2>");
 		
+		out.println("<ul>");
+		Enumeration<String> names = request.getParameterNames();
+		while (names.hasMoreElements()) {
+			String name = names.nextElement();
+			out.println("<li>" + name + "</li>");
+			out.println("<li>" + request.getParameter(name) + "</li>");
+		}
+		out.println("</ul>");
+		
 	}
 	
 	
@@ -50,7 +60,7 @@ public class FormEx1Servlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<h1>POST 방식으로 요청받음</h1>");
 		String value = request.getParameter("name");
-		out.println("<h2>받은 name의 값은:" +value +"</h2>");
+		out.println("<h2>받은 name의 값은:  " +value +"</h2>");
 	}
 
 }
