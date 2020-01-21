@@ -61,6 +61,15 @@ public class FormEx1Servlet extends HttpServlet {
 		out.println("<h1>POST 방식으로 요청받음</h1>");
 		String value = request.getParameter("name");
 		out.println("<h2>받은 name의 값은:  " +value +"</h2>");
+		
+		out.println("<ul>");
+		Enumeration<String> names = request.getParameterNames();
+		while (names.hasMoreElements()) {
+			String name = names.nextElement();
+			out.println("<li>" + name + "</li>");
+			out.println("<li>" + request.getParameter(name) + "</li>");
+		}
+		out.println("</ul>");
 	}
 
 }
