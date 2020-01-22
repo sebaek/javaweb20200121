@@ -14,11 +14,23 @@ body {
 <body>
 <%
 String stars = request.getParameter("stars");
+String hashs = request.getParameter("hashs");
+ 
 out.println(stars);
+out.println(hashs);
+
+if (stars == null) {
+	stars = "5";
+}
+
+if (hashs == null) {
+	hashs = "5";
+}
 %>
 <pre>
 <%
-for (int i = 0; i < 5; i++) {
+int starNum = Integer.parseInt(stars);
+for (int i = 0; i < starNum; i++) {
 	for (int j = 0; j <= i; j++) {
 		out.write("*");
 	}
@@ -29,9 +41,10 @@ for (int i = 0; i < 5; i++) {
 
 <pre>
 <%
-for (int i = 0; i < 5; i++) {
+int hashNum = Integer.parseInt(hashs);
+for (int i = 0; i < hashNum; i++) {
 	for (int j = 0; j <= i; j++) {
-		out.write("*");
+		out.write("#");
 	}
 	out.println();
 }
