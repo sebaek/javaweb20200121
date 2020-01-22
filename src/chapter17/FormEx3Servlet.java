@@ -64,7 +64,7 @@ public class FormEx3Servlet extends HttpServlet {
 		}
 		
 		for (int i = 0; i < 6; i++) {
-			com.add(list.get(random.nextInt(45 - i)));
+			com.add(list.remove(random.nextInt(45 - i)));
 		}
 		
 		for (String v : value1) {
