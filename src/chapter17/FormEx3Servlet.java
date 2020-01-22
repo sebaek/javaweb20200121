@@ -46,8 +46,8 @@ public class FormEx3Servlet extends HttpServlet {
 		String value1 = request.getParameter("number1");
 		String value2 = request.getParameter("number2");
 		
-		out.println("number1=" + value1);
-		out.println("number2=" + value2);
+		out.println("<li>number1=" + value1 + "</li>");
+		out.println("<li>number2=" + value2 + "</li>");
 		
 		out.println("</ul>");
 		
