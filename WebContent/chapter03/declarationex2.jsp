@@ -14,9 +14,25 @@ private int getRandom() {
 <title>Insert title here</title>
 </head>
 <body>
-<%= getRandom() %>
+<%
+Set<Integer> set = new HashSet<>();
+while (set.size() < 6) {
+	set.add(getRandom());
+}
+%>
+
+<%
+for (Integer i : set) {
+%>
+<%= i %><br>
+<%
+}
+%>
+
+
 </body>
 </html>
+
 
 
 
