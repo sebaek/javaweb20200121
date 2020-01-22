@@ -2,6 +2,9 @@ package chapter17;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -43,23 +46,43 @@ public class FormEx3Servlet extends HttpServlet {
 		
 		out.println("<ul>");
 		
-//		String value1 = request.getParameter("number");
 		String[] value1 = request.getParameterValues("number");
-//		String value2 = request.getParameter("number2");
-		
-		for (String v : value1) {
-			out.println("<li>numbers=" + v + "</li>");
-		}
-		
-		
-		
-//		out.println("<li>number2=" + value2 + "</li>");
+		processLotto(value1, out);
 		
 		out.println("</ul>");
 		
 	}
 
+	private void processLotto(String[] value1, PrintWriter out) {
+		Random random = new Random();
+		List<Integer> list = new ArrayList<>();
+		List<Integer> com = new ArrayList<>();
+		List<Integer> user = new ArrayList<>();
+		
+		for (int i = 1; i <= 45; i++) {
+			list.add(i);
+		}
+		
+		for (int i = 0; i < 6; i++) {
+			com.add(list.get(random.nextInt(45 - i)));
+		}
+		
+		for (String v : value1) {
+			user.add(Integer.parseInt(v));
+		}
+		
+		out.println("<li>" + user +"</li>");
+		out.println("<li>" + com +"</li>");
+		
+	}
+
 }
+
+
+
+
+
+
 
 
 
