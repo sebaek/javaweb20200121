@@ -74,9 +74,21 @@ public class FormEx3Servlet extends HttpServlet {
 		out.println("<li>" + user +"</li>");
 		out.println("<li>" + com +"</li>");
 		
+		int cnt = 0;
+		
+		for (Integer u : user) {
+			if (com.contains(u)) {
+				cnt++;
+			}
+		}
+		
+		out.println("<li>" + cnt +"개 일치</li>");
 	}
 
 }
+
+
+
 
 
 
