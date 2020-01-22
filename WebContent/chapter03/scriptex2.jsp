@@ -12,10 +12,25 @@ body {
 </style>
 </head>
 <body>
+<%
+String stars = request.getParameter("stars");
+out.println(stars);
+%>
 <pre>
 <%
 for (int i = 0; i < 5; i++) {
-	for (int j = 0; j < 5; j++) {
+	for (int j = 0; j <= i; j++) {
+		out.write("*");
+	}
+	out.println();
+}
+%>
+</pre>
+
+<pre>
+<%
+for (int i = 0; i < 5; i++) {
+	for (int j = 0; j <= i; j++) {
 		out.write("*");
 	}
 	out.println();
