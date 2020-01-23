@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -62,24 +63,27 @@ public class Game1Servlet extends HttpServlet {
 		
 		String number = request.getParameter("number");
 		Integer num = Integer.parseInt(number);
-		
+		RequestDispatcher dest = null;
 		if (client.size() >= 3) {
-			response.sendRedirect("chapter03/gameEx1Done.jsp");
+			dest = request.getRequestDispatcher("/chapter03/gameEx1Done.jsp");
+//			response.sendRedirect("chapter03/gameEx1Done.jsp");
 //			response.sendRedirect("/my/chapter03/gameEx1Done.jsp");
 //			out.println("<h1>종료되었습니다</h1>");
 		} else {
 			if (ran.remove(num)) {
 				client.add(num);
-				response.sendRedirect("chapter03/gameEx1Won.jsp");
+				dest = request.getRequestDispatcher("/chapter03/gameEx1Won.jsp");
+//				response.sendRedirect("chapter03/gameEx1Won.jsp");
 //				response.sendRedirect("/my/chapter03/gameEx1Won.jsp");
 //				out.println("<h1>당첨 되었습니다!!</h1>");
 			} else {
-				response.sendRedirect("chapter03/gameEx1Lose.jsp");
+				dest = request.getRequestDispatcher("/chapter03/gameEx1Lose.jsp");
+//				response.sendRedirect("chapter03/gameEx1Lose.jsp");
 //				response.sendRedirect("/my/chapter03/gameEx1Lose.jsp");
 //				out.println("<h1>당첨 되지않았습니다!!</h1>");
 			}
 		}
-		
+		dest.forward(request, response);
 		
 	}
 
