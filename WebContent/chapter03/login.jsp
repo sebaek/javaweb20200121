@@ -4,7 +4,12 @@
 <%
 	String id = request.getParameter("memberid");
 	if (id != null && id.equals("madvirus")) {
-		response.sendRedirect("/my/chapter03/index.jsp");
+		// 현재 기준 상대경로
+		response.sendRedirect("index.jsp");
+		// 서버 기준 절대경로
+		//response.sendRedirect("/my/chapter03/index.jsp");
+		// 외부 경로
+		//response.sendRedirect("https://www.naver.com");
 	} else {
 %>
 
