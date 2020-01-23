@@ -49,7 +49,7 @@ public class ParameterEx1Servlet extends HttpServlet {
 			String name = (String) names.nextElement();
 			out.print("<li>" + name + "</li>");
 		}
-		out.print("<ul>");
+		out.print("</ul>");
 		
 		Map map = request.getParameterMap();
 		Set keys = map.keySet();
