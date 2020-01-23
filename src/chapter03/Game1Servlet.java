@@ -28,10 +28,11 @@ public class Game1Servlet extends HttpServlet {
 		Random random = new Random();
 		ran = new HashSet<Integer>();
 		while (ran.size() < 3) {
-			ran.add(random.nextInt(30));
+			ran.add(random.nextInt(4));
 		}
 		client = new HashSet<Integer>();
 		client = Collections.synchronizedSet(client);
+		ran = Collections.synchronizedSet(ran);
 	}
 	
 	
