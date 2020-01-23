@@ -65,9 +65,9 @@ public class Game1Servlet extends HttpServlet {
 		if (client.size() >= 3) {
 			out.println("<h1>종료되었습니다</h1>");
 		} else {
-			if (ran.contains(num)) {
-				out.println("<h1>당첨 되었습니다!!</h1>");
+			if (ran.remove(num)) {
 				client.add(num);
+				out.println("<h1>당첨 되었습니다!!</h1>");
 			} else {
 				out.println("<h1>당첨 되지않았습니다!!</h1>");
 			}
@@ -77,13 +77,3 @@ public class Game1Servlet extends HttpServlet {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
