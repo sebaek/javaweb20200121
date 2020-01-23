@@ -64,13 +64,19 @@ public class Game1Servlet extends HttpServlet {
 		Integer num = Integer.parseInt(number);
 		
 		if (client.size() >= 3) {
-			out.println("<h1>종료되었습니다</h1>");
+			response.sendRedirect("chapter03/gameEx1Done.jsp");
+//			response.sendRedirect("/my/chapter03/gameEx1Done.jsp");
+//			out.println("<h1>종료되었습니다</h1>");
 		} else {
 			if (ran.remove(num)) {
 				client.add(num);
-				out.println("<h1>당첨 되었습니다!!</h1>");
+				response.sendRedirect("chapter03/gameEx1Won.jsp");
+//				response.sendRedirect("/my/chapter03/gameEx1Won.jsp");
+//				out.println("<h1>당첨 되었습니다!!</h1>");
 			} else {
-				out.println("<h1>당첨 되지않았습니다!!</h1>");
+				response.sendRedirect("chapter03/gameEx1Lose.jsp");
+//				response.sendRedirect("/my/chapter03/gameEx1Lose.jsp");
+//				out.println("<h1>당첨 되지않았습니다!!</h1>");
 			}
 		}
 		
