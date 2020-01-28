@@ -8,6 +8,14 @@
 <title>초기화 파라미터 읽어오기</title>
 </head>
 <body>
+<%
+String value1 = application.getInitParameter("logEnabled");
+String value2 = application.getInitParameter("debugLevel");
+%>
+<%=value1 %><br>
+<%=value2 %><br>
+
+<hr>
 초기화 파라미터 목록:
 <ul>
 <% 
