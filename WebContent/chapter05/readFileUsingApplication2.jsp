@@ -12,13 +12,9 @@
 char[] buff = new char[128];
 int len = -1;
 
-/*
-String filePath = 
-"C:\\Users\\USER\\Documents\\myworkspace\\eclipse-workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\myweb\\notice.txt";
-*/
-String filePath = application.getRealPath("/notice.txt");
+String filePath = "/notice.txt";
 
-try (InputStreamReader fr = new InputStreamReader(new FileInputStream(filePath), "UTF-8")) {
+try (InputStreamReader fr = new InputStreamReader(application.getResourceAsStream(filePath), "UTF-8")) {
 	while ((len = fr.read(buff)) != -1) {
 		out.print(new String(buff, 0, len));
 	}
