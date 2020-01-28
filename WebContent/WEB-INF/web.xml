@@ -11,6 +11,11 @@
   </welcome-file-list>
   
   <context-param>
+  	<param-name>myparameter</param-name>
+  	<param-value>myvalue</param-value>
+  </context-param>
+  
+  <context-param>
   	<description>로깅 여부</description>
   	<param-name>logEnabled</param-name>
   	<param-value>true</param-value>
