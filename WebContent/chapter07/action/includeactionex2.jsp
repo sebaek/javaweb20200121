@@ -7,13 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div>
-<ul>
-<li><a href="#">메뉴1</a></li>
-<li><a href="#">메뉴2</a></li>
-<li><a href="#">메뉴3</a></li>
-</ul>
-</div>
+<jsp:include page="navbar.jsp"></jsp:include>
 
 <div>
 <h1>두번째 콘텐츠</h1>
