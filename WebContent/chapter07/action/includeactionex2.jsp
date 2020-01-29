@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="navbar.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/jspf/navbar.jsp"></jsp:include>
 
 <div>
 <h1>두번째 콘텐츠</h1>
