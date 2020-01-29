@@ -10,7 +10,7 @@
 <body>
 
 <%-- navbar --%>
-<my:navbar user="hong" ></my:navbar>
+<my:navbar user="hong" nickName="홍길동"></my:navbar>
 
 <h1> 메인 컨텐츠</h1>
 <p> 메인 컨텐츠~~~~~~~~ ~~~~~~</p>
