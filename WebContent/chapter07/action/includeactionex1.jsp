@@ -8,6 +8,10 @@
 </head>
 <body>
 
+<% 
+request.setAttribute("nickName", "홍길동");
+%>
+
 <jsp:include page="/WEB-INF/jspf/navbar.jsp">
 	<jsp:param value="hong" name="user"/>
 </jsp:include>
