@@ -8,7 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:import url="/WEB-INF/jspf/navbar.jsp"></c:import>
+<c:import url="/WEB-INF/jspf/navbar.jsp">
+	<c:param name="user" value="hong"></c:param>
+</c:import>
 <%-- /WEB-INF/jspf/navbar.jsp --%>
 
 <h1>
