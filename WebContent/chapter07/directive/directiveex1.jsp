@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+String a = "새로운 값";
+%>
+
 <%@ include file="/WEB-INF/jspf/navbar2.jspf" %>
 
 <h1>메인 콘텐츠</h1>

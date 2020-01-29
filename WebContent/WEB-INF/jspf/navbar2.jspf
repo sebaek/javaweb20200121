@@ -5,4 +5,5 @@
 <li><a href="#">메뉴1</a></li>
 <li><a href="#">메뉴1</a></li>
 </ul>
+<%= a %>
 </div>

@@ -10,6 +10,7 @@
 
 <% 
 request.setAttribute("nickName", "홍길동");
+String a = "새로운 값";
 %>
 
 <jsp:include page="/WEB-INF/jspf/navbar.jsp">
