@@ -3,6 +3,7 @@ package chapter08;
 public class Temperature {
 	private double celsius;
 	
+	// celsius, fahrenheit
 	public double getCelsius() {
 		return celsius;
 	}
