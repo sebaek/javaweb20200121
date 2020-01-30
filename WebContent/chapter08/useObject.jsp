@@ -11,7 +11,19 @@
 <body>
 
 <%= member.getName() %> (<%= member.getId() %>) 회원님
-안녕하세요.
+안녕하세요.<br>
+
+<jsp:getProperty name="member" property="name"/>
+(<jsp:getProperty name="member" property="id" />) 회원님
+안녕하세요.<br>
 
 </body>
 </html>
+
+
+
+
+
+
+
+

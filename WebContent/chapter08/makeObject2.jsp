@@ -6,5 +6,6 @@
   <jsp:setProperty name="member" property="name" value="최범균"/>
 </jsp:useBean>
 
+<jsp:setProperty name="member" property="id" value="mad" />
 
 <jsp:forward page="useObject.jsp"></jsp:forward>
