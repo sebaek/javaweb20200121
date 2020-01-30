@@ -46,7 +46,7 @@ public class ForwardEx1Servlet extends HttpServlet {
 		
 		request.setAttribute("items", items);
 		
-		RequestDispatcher view = request.getRequestDispatcher("/chapter07/forward/forwardex3.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/view/forwardex3.jsp");
 		view.forward(request, response);
 	}
 
