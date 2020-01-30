@@ -26,6 +26,8 @@ request.setCharacterEncoding("utf-8");
 <jsp:getProperty property="name" name="member"/><br>
 <jsp:getProperty property="id" name="member"/><br>
 
+${member.name } <br>
+${member.id }<br>
 </body>
 </html>
 
