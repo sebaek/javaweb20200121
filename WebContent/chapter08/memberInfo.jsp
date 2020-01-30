@@ -5,8 +5,11 @@ request.setCharacterEncoding("utf-8");
 %>   
 
 <jsp:useBean id="member" class="chapter08.MemberInfo">
+	<jsp:setProperty name="member" property="*" />
+<%--
 	<jsp:setProperty name="member" property="name" param="userName" />
 	<jsp:setProperty name="member" property="id" param="userID" />
+ --%>
 </jsp:useBean>
 
 <!DOCTYPE html>
@@ -17,8 +20,8 @@ request.setCharacterEncoding("utf-8");
 </head>
 <body>
 <%--
-<%= request.getParameter("userName") %><br>
-<%= request.getParameter("userID") %>
+<%= request.getParameter("name") %><br>
+<%= request.getParameter("id") %>
  --%>
 <jsp:getProperty property="name" name="member"/><br>
 <jsp:getProperty property="id" name="member"/><br>

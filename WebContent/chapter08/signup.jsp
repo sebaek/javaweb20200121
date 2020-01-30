@@ -9,8 +9,8 @@
 <body>
 
 <form action="memberInfo.jsp" method="post">
-<input name="userName" placeholder="이름"><br>
-<input name="userID" placeholder="ID"><br>
+<input name="name" placeholder="이름"><br>
+<input name="id" placeholder="ID"><br>
 <input type="submit" value="등록"><br>
 </form>
 
