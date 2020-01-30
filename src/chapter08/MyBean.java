@@ -5,6 +5,13 @@ public class MyBean {
 	private int age;
 	private boolean married;
 	
+	// property:
+	// lunarAge, age, name, married
+	
+	
+	public int getLunarAge() {
+		return age - 1;
+	}
 	public String getName() {
 		return name;
 	}
