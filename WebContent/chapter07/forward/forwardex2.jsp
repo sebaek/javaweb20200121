@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>forwardex 2 example</h1>
-
+<%= request.getAttribute("name") %> 님
 <h1>forwardex 2 example end</h1>
 </body>
 </html>
