@@ -13,6 +13,7 @@
 <label>딸기 <input type="checkbox" name="fruits" value="berry"></label>
 <label>바나나 <input type="checkbox" name="fruits" value="banana"></label>
 <label>사과 <input type="checkbox" name="fruits" value="apple"></label>
+<br>
 <input type="submit" >
 </form> 
 

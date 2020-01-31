@@ -9,7 +9,9 @@
 <body>
 이름 : ${param.name }<br>
 email : ${param.email }<br>
-과일 : ${param.fruits }<br>
+과일 : ${paramValues.fruits[0] }
+ ${paramValues.fruits[1] }
+ ${paramValues.fruits[2] } <br>
 </body>
 </html>
 
