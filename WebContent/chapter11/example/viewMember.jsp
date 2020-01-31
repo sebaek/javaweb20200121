@@ -12,9 +12,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-이름 : <br>
-아이디 : <br>
-이메일 : <br>
+이름 : ${mem["name"] }<br>
+아이디 : ${mem["id"] }<br>
+이메일 : ${mem.email }<br>
 
 
 
