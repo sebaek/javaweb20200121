@@ -13,5 +13,13 @@ accept-encoding: ${header["accept-encoding"] }<br>
 accept-language: ${header["accept-language"] }<br>
 accept[0] : ${headerValues.accept[0] }<br>
 
+<h1>EL initParam object</h1>
+${initParam.myparameter }<br>
+${initParam.logEnabled }<br>
+${initParam.debugLevel }<br>
+
 </body>
 </html>
+
+
+
