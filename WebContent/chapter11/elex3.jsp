@@ -11,9 +11,12 @@
 <%
 MemberInfo member = new MemberInfo();
 member.setName("홍길동");
+member.setId("hong");
+
 request.setAttribute("member3", member);
 %>
-${member3.name }
+${member3.name }<br>
+${member3.id }<br>
 </body>
 </html>
 
