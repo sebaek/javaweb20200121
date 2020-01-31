@@ -24,11 +24,9 @@ cookie
 initParam
  --%>
 <%
-pageContext.setAttribute("pageAttr1", "pageValue1");
-pageContext.setAttribute("attr1", "value1");
+pageContext.setAttribute("pageAttr1", 3.14);
 
 request.setAttribute("requestAttr1", "requestValue1");
-request.setAttribute("attr1", "value2");
 
 session.setAttribute("sessionAttr1", "sessionValue1");
 session.setAttribute("attr1", "value3");
