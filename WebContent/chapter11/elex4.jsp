@@ -20,6 +20,25 @@ ${attr1.key1 }<br>
 ${attr1.key2 }<br>
 ${attr1["key3"] }<br>
 ${attr1["4key"] }<br>
+
+<%
+Map<String, chapter08.MemberInfo> map2 = new HashMap<>();
+chapter08.MemberInfo m = new chapter08.MemberInfo();
+m.setName("hong");
+map2.put("mem1", m);
+request.setAttribute("members", map2);
+%>
+
+<br>
+${members.mem1.name }<br>
+${members["mem1"].name }<br>
+${members["mem1"]["name"]}<br>
+
+
+
+
+
+
 </body>
 </html>
 
