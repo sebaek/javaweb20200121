@@ -17,8 +17,9 @@ request.setAttribute("num", list);
 %>
 ${num[0] }<br>
 ${num[1] }<br>
-${num[2] }<br>
-
+${num["2"] }<br>
+${num[3] }<br>
+${num2 }<br>
 
 </body>
 </html>
