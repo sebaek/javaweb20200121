@@ -4,7 +4,7 @@
 request.setAttribute("attr1", "value1");
 %>
 <jsp:useBean id="member" class="chapter08.MemberInfo" scope="request">
-	<jsp:setProperty name="member" property="name" value="seoul" />
+	<jsp:setProperty name="member" property="name" value="${attr1 }" />
 </jsp:useBean>
 <!DOCTYPE html>
 <html>
