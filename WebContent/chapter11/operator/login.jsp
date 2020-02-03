@@ -6,6 +6,9 @@ request.setCharacterEncoding("utf-8");
 String id = request.getParameter("id");
 if (id != null && id.equals("seoul")) {
 	session.setAttribute("user", "seoul");
+} else {
+	session.removeAttribute("user");
+	//session.invalidate();
 }
 %>
 <!DOCTYPE html>
