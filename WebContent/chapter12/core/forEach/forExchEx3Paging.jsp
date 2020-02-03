@@ -16,7 +16,7 @@
 </form>
 
 <c:forEach var="p" varStatus="status" begin="${param.begin }" end="${param.end }">
-<c:if test="${status.first }">
+<c:if test="${status.first and p ne 1}">
 <a href="#">&lt;&lt;</a>
 </c:if>
 <a href="#">${p }</a>
