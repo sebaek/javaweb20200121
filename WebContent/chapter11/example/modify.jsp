@@ -13,5 +13,16 @@
 <input name="email" value="${user.email }"><br>
 <input type="submit" value="수정">
 </form>
+
+<h1>수정 전 정보</h1>
+이름 : ${beforeuser.name }<br>
+email : ${beforeuser.email }<br>
 </body>
 </html>
+
+
+
+
+
+
+

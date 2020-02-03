@@ -43,6 +43,8 @@ public class ModifyServlet extends HttpServlet {
 		User user = new User();
 		user.setName(request.getParameter("name"));
 		user.setEmail(request.getParameter("email"));
+		
+		request.setAttribute("beforeuser", application.getAttribute("user"));
 		application.setAttribute("user", user);
 		
 		request.setAttribute("user", user);
