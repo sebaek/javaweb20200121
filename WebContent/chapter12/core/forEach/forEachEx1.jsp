@@ -22,6 +22,12 @@
 	<hr>
 </c:forEach>
 
+<c:forEach var="i" begin="1" end="5">
+	<c:forEach var="j" begin="1" end="${i }">
+		*
+	</c:forEach>
+	<br>
+</c:forEach>
 
 
 
