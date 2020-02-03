@@ -17,8 +17,7 @@
 </select>
 <input type="submit" >
 </form>
-</body>
-</html>
+
 <c:if test="${empty param.hero }">
 영웅을 선택해주세요.
 </c:if>
@@ -32,7 +31,8 @@
 블랙위도우은 스칼렛 요한슨입니다.
 </c:if>
 
-
+</body>
+</html>
 
 
 

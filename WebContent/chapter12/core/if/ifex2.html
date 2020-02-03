@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<script>
+	$(function() {
+		$("#button1").click(function() {
+			var hero = $("#select1").val();
+			var text = "";
+			if (hero === "ironman") {
+				text = "아이언맨은 로버트 다우니 주니어입니다.";
+			} else if (hero == "captain") {
+				text = "캡틴은 크리스 에반스입니다.";
+			} else if (hero == "black") {
+				text = "블랙위도우는 스칼렛 요한슨입니다.";
+			}
+			$("#result").text(text);
+		});
+	})
+</script>
+</head>
+<body>
+<select id="select1" name="hero">
+<option value="ironman">아이언맨</option>
+<option value="captain">캡틴</option>
+<option value="black">블랙위도우</option>
+</select>
+<button id="button1">선택</button>
+<p id="result">영웅을 선택해주세요.</p>
+</body>
+</html>
+
+
+
