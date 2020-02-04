@@ -49,7 +49,11 @@ table {
 
 <td>${user.name }</td>
 <td>${user.email }</td>
-<td>${user.vip }</td>
+<td>
+<c:if test="${user.vip }">
+&bigstar;
+</c:if>
+</td>
 
 </tr>
 
@@ -58,7 +62,6 @@ table {
 
 </table>
 
-</table>
 </body>
 </html>
 
