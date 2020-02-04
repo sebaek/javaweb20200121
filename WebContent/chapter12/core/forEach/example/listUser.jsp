@@ -4,6 +4,7 @@
 <%@ page import="java.util.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
+request.setCharacterEncoding("utf-8");
 Object o = application.getAttribute("userList");
 if (o == null) {
 	o = new ArrayList<User>();
