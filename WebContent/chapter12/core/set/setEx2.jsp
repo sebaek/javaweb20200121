@@ -26,8 +26,27 @@ lajdf @jkld aflajf.comlaf;eajf;
 ${user.name }<br>
 ${user.email }<br>
 ${user.vip }<br>
+
+<hr>
+
+<%
+Map<String, String> map = new HashMap<>();
+pageContext.setAttribute("map", map);
+%>
+<c:set target="${map }" property="key1" value="value1" />
+<c:set target="${map }" property="2key" value="value2" />
+${map.key1 }<br>
+${map["2key"] }<br>
+
+
 </body>
 </html>
+
+
+
+
+
+
 
 
 
