@@ -40,7 +40,7 @@ if (paramId != null && paramPw != null) {
 
 </c:if>
 <c:if test="${empty user }">
-<form action="" method="post">
+<form action="login.jsp" method="post">
 <input name="id" placeholder="아이디"><br>
 <input name="pw" placeholder="패스워드" type="password"><br>
 <input type="submit" value="로그인">
