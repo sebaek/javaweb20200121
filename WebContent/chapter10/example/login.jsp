@@ -3,6 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 request.setCharacterEncoding("utf-8");
+
+String logout = request.getParameter("logout");
+if (logout != null && logout.equals("logout")) {
+	//session.removeAttribute("user");
+	session.invalidate();
+}
+
 String id = "seoul";
 String pw = "korea";
 
@@ -25,7 +32,12 @@ if (paramId != null && paramPw != null) {
 <body>
 <c:if test="${not empty user }" >
 반갑습니다. ${user }님.<br>
-<a href="#">logout</a>
+
+<c:url value="login.jsp" var="logoutUrl">
+	<c:param name="logout" value="logout" />
+</c:url>
+<a href="${logoutUrl}">logout</a>
+
 </c:if>
 <c:if test="${empty user }">
 <form action="" method="post">
