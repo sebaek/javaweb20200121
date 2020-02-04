@@ -12,8 +12,10 @@ if (o == null) {
 	o = new ArrayList<String>();
 	session.setAttribute("items", o);
 }
-List<String> cart = (List<String>) o;
-cart.add(n);
+if (!session.isNew()) {
+	List<String> cart = (List<String>) o;
+	cart.add(n);
+}
 %>
 <!DOCTYPE html>
 <html>
