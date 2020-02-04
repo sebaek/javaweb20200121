@@ -15,10 +15,22 @@
 <br>
 <a href="<c:url value='/chapter12/core/out/example1.jsp' />">example1.jsp</a>
 
+<hr>
+<c:url value='/chapter12/core/out/example1.jsp' var="exampleUrl"/>
+${exampleUrl }<br>
+<a href="${exampleUrl }" >example1.jsp</a>
+<hr>
+<c:url value='/chapter12/core/out/example1.jsp' var="exampleUrl">
+	<c:param name="text" value="default text" />
+</c:url>
+<a href="${exampleUrl }" >example1.jsp</a>
 
 
 </body>
 </html>
+
+
+
 
 
 
