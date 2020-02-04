@@ -21,7 +21,7 @@ ${exampleUrl }<br>
 <a href="${exampleUrl }" >example1.jsp</a>
 <hr>
 <c:url value='/chapter12/core/out/example1.jsp' var="exampleUrl">
-	<c:param name="text" value="default text" />
+	<c:param name="text" value="기본 텍스트" />
 </c:url>
 <a href="${exampleUrl }" >example1.jsp</a>
 
