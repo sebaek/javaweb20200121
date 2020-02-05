@@ -5,6 +5,17 @@
 Cookie cookie = new Cookie("oneh", "1time");
 cookie.setMaxAge(60 * 60);
 response.addCookie(cookie);
+
+Cookie[] cookies = request.getCookies();
+for (Cookie c : cookies) {
+	if (c.getName().equals("JSESSIONID")) {
+		c.setMaxAge(24 * 60 * 60);	
+		c.setPath(request.getContextPath());
+		response.addCookie(c);
+	}
+}
+
+
 %>
 <!DOCTYPE html>
 <html>
