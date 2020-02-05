@@ -9,13 +9,29 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="login.jsp" method="post">
-<input name="id" placeholder="아이디"><br>
-<input type="password" name="password" placeholder="패스워드"><br>
-<input type="submit" value="로그인">
-</form>
+<h1>메인 페이지</h1>
+
+<c:if test=${empty user }>
+<a href='<c:url value="/chapter09/example/login" />'>
+로그인
+</a>
+</c:if>
+
+<c:if test=${not empty user }>
+<a href='<c:url value="/chapter09/example/logout" />'>
+로그아웃
+</a>
+</c:if>
+
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 

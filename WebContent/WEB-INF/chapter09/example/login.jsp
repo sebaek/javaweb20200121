@@ -9,13 +9,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="login.jsp" method="post">
+<h1>로그인 </h1>
+<form action="" method="post">
 <input name="id" placeholder="아이디"><br>
-<input type="password" name="password" placeholder="패스워드"><br>
+<input name="password" placeholder="패스워드"><br>
 <input type="submit" value="로그인">
 </form>
+
+<p><b>${error }</b></p>
+
+
 </body>
 </html>
+
+
+
 
 
 
