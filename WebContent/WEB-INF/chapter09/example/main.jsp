@@ -11,13 +11,13 @@
 <body>
 <h1>메인 페이지</h1>
 
-<c:if test=${empty user }>
+<c:if test='${empty user }'>
 <a href='<c:url value="/chapter09/example/login" />'>
 로그인
 </a>
 </c:if>
 
-<c:if test=${not empty user }>
+<c:if test='${not empty user }'>
 <a href='<c:url value="/chapter09/example/logout" />'>
 로그아웃
 </a>
