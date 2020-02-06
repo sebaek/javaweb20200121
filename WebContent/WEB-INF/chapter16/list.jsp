@@ -15,7 +15,7 @@
 <c:forEach var="post" items="${board }">
 <tr>
 <td>${post.id }</td>
-<td>${post.title }</td>
+<td><a href="view?id=${post.id }">${post.title }</a></td>
 </tr>
 </c:forEach>
 
