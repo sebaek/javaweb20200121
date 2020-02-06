@@ -17,6 +17,13 @@
 <my:myTag3>
 내용물....
 </my:myTag3>
+<br>
+<my:triangle>
+*
+</my:triangle>
+<my:triangle>
+#
+</my:triangle>
 
 </body>
 </html>
