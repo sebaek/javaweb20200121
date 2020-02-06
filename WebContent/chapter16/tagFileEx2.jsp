@@ -17,6 +17,11 @@
 <my:shortify>
 우유와 
 </my:shortify>
+<hr>
+<my:triangle2 line="10">
+*
+</my:triangle2>
+
 </body>
 </html>
 
