@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib tagdir="/WEB-INF/tags/chap16" prefix="my" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,7 @@
 <title>게시판 목록 보기</title>
 </head>
 <body>
+<my:boardNav />
 <h1>게시판 목록 보기</h1>
 <table>
 <tr><th>번호</th><th>제목</th></tr>
