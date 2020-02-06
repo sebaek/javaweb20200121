@@ -1,9 +1,14 @@
 package listener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+
+import chapter16.Post;
 
 /**
  * Application Lifecycle Listener implementation class AppListener
@@ -32,9 +37,19 @@ public class AppListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce)  {
     	ServletContext application = sce.getServletContext();
         application.setRequestCharacterEncoding("utf-8");
+        
+        List<Post> board = new ArrayList<>();
+        application.setAttribute("board", board);
     }
 	
 }
+
+
+
+
+
+
+
 
 
 
