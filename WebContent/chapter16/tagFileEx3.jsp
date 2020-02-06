@@ -10,31 +10,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<my:shortify>
-우유와 함께 즐기는 달콤한 흑당라떼
-</my:shortify>
-<br>
-<my:shortify>
-우유와 
-</my:shortify>
-<hr>
-<my:triangle2 line="5">
-*
-</my:triangle2>
+<div>
+<my:paging begin="1" end="10" />
+</div>
 
+<div>
+<my:paging begin="10" end="15" />
+</div>
 
-<hr>
-<my:triangle2 line="10">
-*
-</my:triangle2>
 
 
 </body>
 </html>
-
-
-
-
-
-
-
