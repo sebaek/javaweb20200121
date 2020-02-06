@@ -12,7 +12,7 @@
 <h1>게시물 작성</h1>
 <form method="post">
 <input type="text" name="title" placeholder="제목"><br>
-<textarea rows="20" cols="50" name="body"></textarea>
+<textarea rows="5" cols="50" name="body"></textarea><br>
 <input type="submit" value="등록">
 </form>
 
