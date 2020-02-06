@@ -13,7 +13,14 @@
 <h1>제목 태그</h1>
 
 <my:myTag />
-
+<my:myTag2 />
+<my:myTag3>
+내용물....
+</my:myTag3>
 
 </body>
 </html>
+
+
+
+
