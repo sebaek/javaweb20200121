@@ -4,6 +4,15 @@ public class Post {
 	private int id;
 	private String title;
 	private String body;
+	private boolean deleted;
+	
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
+	}
+	public boolean isDeleted() {
+		return this.deleted;
+	}
+	
 	
 	public int getId() {
 		return id;

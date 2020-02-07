@@ -18,7 +18,8 @@
 <textarea rows="5" cols="25" readonly>
 <c:out value="${post.body }" />
 </textarea>
-
+<br>
+<a href="delete?id=${post.id }">삭제</a>
 </body>
 </html>
 

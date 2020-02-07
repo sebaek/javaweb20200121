@@ -15,10 +15,14 @@
 <table>
 <tr><th>번호</th><th>제목</th></tr>
 <c:forEach var="post" items="${board }">
-<tr>
-<td>${post.id }</td>
-<td><a href="view?id=${post.id }"><c:out value="${post.title }" /></a></td>
-</tr>
+
+	<c:if test="${not post.deleted }">
+		<tr>
+		<td>${post.id }</td>
+		<td><a href="view?id=${post.id }"><c:out value="${post.title }" /></a></td>
+		</tr>
+	</c:if>
+
 </c:forEach>
 
 </table>
