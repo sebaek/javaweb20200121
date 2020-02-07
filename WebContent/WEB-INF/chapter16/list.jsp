@@ -27,8 +27,16 @@
 
 </table>
 
+<my:message />
+
+
 </body>
 </html>
+
+
+
+
+
 
 
 

@@ -54,6 +54,9 @@ public class UpdateServlet extends HttpServlet {
 		post.setTitle(title);
 		post.setBody(body);
 		
+		request.getSession()
+		    .setAttribute("message", id + "번 수정되었습니다.");
+		
 		String path = request.getContextPath() 
 				+ "/chapter16/view?id=" + id;
 		response.sendRedirect(path);

@@ -21,6 +21,10 @@
 <br>
 <a href="update?id=${post.id }">수정</a>
 <a href="delete?id=${post.id }">삭제</a>
+
+
+<my:message />
+
 </body>
 </html>
 

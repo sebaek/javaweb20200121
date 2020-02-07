@@ -36,6 +36,9 @@ public class DeleteServlet extends HttpServlet {
 		Post post = board.get(id - 1);
 		post.setDeleted(true);
 		
+		request.getSession()
+			.setAttribute("message", id + "번 삭제되었습니다.");
+		
 		String path = request.getContextPath()
 				+ "/chapter16/list";
 		response.sendRedirect(path);
