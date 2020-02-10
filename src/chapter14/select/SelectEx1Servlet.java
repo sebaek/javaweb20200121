@@ -56,7 +56,7 @@ public class SelectEx1Servlet extends HttpServlet {
 		String pw = "admin";
 		
 		// 쿼리
-		String sql = "SELECT ename FROM employee";
+		String sql = "SELECT ename FROM employee ORDER BY ename ";
 		String name = "";
 		
 		try {
@@ -71,7 +71,7 @@ public class SelectEx1Servlet extends HttpServlet {
 			// 4.쿼리 실행
 			rs = stmt.executeQuery(sql);
 			// 5. 쿼리 실행 결과 사용
-			if (rs.next()) {
+			while (rs.next()) {
 				name = rs.getString("ENAME");
 			}
 			
