@@ -65,7 +65,19 @@ public class SelectEx6Servlet extends HttpServlet {
 				) {
 			rs = stmt.executeQuery(query);
 			
-			
+			while (rs.next()) {
+				Employee emp = new Employee();
+				emp.setEno(rs.getInt("ENO"));
+				emp.setEname(rs.getString("ENAME"));
+				emp.setJob(rs.getString("JOB"));
+				emp.setManager(rs.getInt("MANAGER"));
+				emp.setHireDate(rs.getDate("HIREDATE"));
+				emp.setSalary(rs.getDouble("SALARY"));
+				emp.setCommission(rs.getDouble("COMMISSION"));
+				emp.setDno(rs.getInt("DNO"));
+				
+				list.add(emp);
+			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
