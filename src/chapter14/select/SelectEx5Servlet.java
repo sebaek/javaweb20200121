@@ -37,7 +37,7 @@ public class SelectEx5Servlet extends HttpServlet {
 		String name = request.getParameter("name");
 		
 		if (name != null) {
-			Employee emp = getEmployeeByName(name);
+			Employee emp = getEmployeeByName(name.toUpperCase());
 			request.setAttribute("employee", emp);
 			if (emp == null) {
 				request.setAttribute("message", "찾지 못했습니다.");	
