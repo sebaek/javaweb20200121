@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import chapter14.bean.Employee;
+import chapter14.util.DBCP;
 
 /**
  * Servlet implementation class SelectEx4Servlet
@@ -53,20 +54,12 @@ public class SelectEx4Servlet extends HttpServlet {
 		Statement stmt = null;
 		ResultSet rs = null;
 
-		// 데이터베이스 접속에 필요한 정보
-		String url = "jdbc:oracle:thin:@localhost:1521:XE";
-		String id = "c##mydb";
-		String pw = "admin";
-
 		// 쿼리
 		String sql = "SELECT * FROM employee ";
 		List<Employee> emps = new ArrayList<>();;
 
 		try {
-			// 1.JDBC 드라이버 로딩
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			// 2.데이터베이스 커넥션 구함
-			con = DriverManager.getConnection(url, id, pw);
+			con = DBCP.getConnection();
 
 			// 3.쿼리 실행을 위한 Statement 객체 생성
 			stmt = con.createStatement();

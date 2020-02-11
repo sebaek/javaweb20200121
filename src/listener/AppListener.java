@@ -11,6 +11,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+import chapter14.util.DBCP;
 import chapter16.Post;
 import oracle.ucp.jdbc.PoolDataSource;
 import oracle.ucp.jdbc.PoolDataSourceFactory;
@@ -86,6 +87,7 @@ public class AppListener implements ServletContextListener {
 
 			System.out.println("Connection returned to the " + "UniversalConnectionPool\n");
 
+			DBCP.setConnectionPool(pds);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("BasicConnectionExample - " + "main()-SQLException occurred : " + e.getMessage());
