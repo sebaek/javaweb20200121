@@ -39,7 +39,7 @@ public class SelectEx12Servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String month = request.getParameter("month");
-		
+
 		if (month != null) {
 			List<Employee> list = listEmployeeByHireDate(month);
 			request.setAttribute("emps", list);
@@ -51,13 +51,15 @@ public class SelectEx12Servlet extends HttpServlet {
 
 	private List<Employee> listEmployeeByHireDate(String month) {
 		List<Employee> list = new ArrayList<>();
-		String sql = "SELECT * FROM employee" 
-		+ " WHERE to_char(hiredate, 'YYYY-MM')=?";
+		String sql = "SELECT * FROM employee" + " WHERE to_char(hiredate, 'YYYY-MM')=?";
 
-		try (Connection con = DBCP.getConnection(); PreparedStatement stmt = con.prepareStatement(sql);) {
-			
+		try (
+				Connection con = DBCP.getConnection();
+				PreparedStatement stmt = con.prepareStatement(sql);
+		) {
+
 			stmt.setString(1, month);
-			
+
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
