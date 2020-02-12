@@ -62,7 +62,7 @@ public class SelectEx7Servlet extends HttpServlet {
 		}
 		
 		String sql = "SELECT * FROM employee " 
-		+ "WHERE job IN (" + inJobs + ")";
+		+ "WHERE upper(job) IN (" + inJobs + ")";
 
 		try (Connection con = DBCP.getConnection();
 			 Statement stmt = con.createStatement();) {

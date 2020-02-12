@@ -56,7 +56,7 @@ public class SelectEx5Servlet extends HttpServlet {
 		Employee emp = null;
 		
 		String sql = "SELECT * FROM employee "
-				+ "WHERE ename='" + name + "'";
+				+ "WHERE upper(ename)='" + name + "'";
 		
 		Connection con = null;
 		Statement stmt = null;
