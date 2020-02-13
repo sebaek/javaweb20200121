@@ -11,7 +11,7 @@
 <body>
 <h1>부서 사람들 출력하기</h1>
 <form action="">
-	<select name="dname" >
+	<select name="dno" >
 		<option value="10">ACCOUNTING</option>
 		<option value="20">RESEARCH</option>
 		<option value="30">SALES</option>

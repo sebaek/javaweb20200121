@@ -48,7 +48,7 @@ public class SelectEx13Servlet extends HttpServlet {
 
 	private List<Employee> listEmployeesByDept(String dno) {
 		List<Employee> list = new ArrayList<>();
-		String sql = "SELET e.eno, e.name, d.dname "
+		String sql = "SELECT e.eno, e.ename, d.dname "
 				+ "FROM employee e, department d "
 				+ "WHERE e.dno = d.dno "
 				+ "AND d.dno=?";
