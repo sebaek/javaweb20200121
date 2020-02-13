@@ -11,6 +11,14 @@ public class Employee {
 	private double salary;
 	private double commission;
 	private int dno;
+	private String dname;
+	
+	public String getDname() {
+		return dname;
+	}
+	public void setDname(String dname) {
+		this.dname = dname;
+	}
 	
 	public int getEno() {
 		return eno;
