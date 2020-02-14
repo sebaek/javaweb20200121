@@ -25,6 +25,7 @@
 <li>salary: ${employee.salary }</li>
 <li>commission: ${employee.commission }</li>
 <li>dno: ${employee.dno }</li>
+<li>dname: ${employee.dname }</li>
 </ul>
 </c:if>
 <h3>${message }</h3>
