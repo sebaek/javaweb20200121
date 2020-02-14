@@ -20,6 +20,7 @@
 <li>ename: ${employee.ename }</li>
 <li>job: ${employee.job }</li>
 <li>manager: ${employee.manager }</li>
+<li>managerName: ${employee.managerName }</li>
 <li>hireDate: ${employee.hireDate }</li>
 <li>salary: ${employee.salary }</li>
 <li>commission: ${employee.commission }</li>

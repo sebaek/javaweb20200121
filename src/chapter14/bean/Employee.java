@@ -12,6 +12,14 @@ public class Employee {
 	private double commission;
 	private int dno;
 	private String dname;
+	private String managerName;
+	
+	public String getManagerName() {
+		return managerName;
+	}
+	public void setManagerName(String managerName) {
+		this.managerName = managerName;
+	}
 	
 	public String getDname() {
 		return dname;
