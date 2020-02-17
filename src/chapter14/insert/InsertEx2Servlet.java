@@ -2,6 +2,7 @@ package chapter14.insert;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -86,7 +87,7 @@ public class InsertEx2Servlet extends HttpServlet {
 		e.setEno(Integer.parseInt(eno));
 		e.setEname(ename);
 		e.setJob(job);
-		e.setHireDate(java.sql.Date.valueOf(hireDate));
+		e.setHireDate(Date.valueOf(hireDate));
 		
 		// db 에 추가
 		addEmployee(e);
@@ -109,7 +110,7 @@ public class InsertEx2Servlet extends HttpServlet {
 			stmt.setInt(1, e.getEno());
 			stmt.setString(2, e.getEname());
 			stmt.setString(3, e.getJob());
-			stmt.setDate(4, (java.sql.Date) e.getHireDate());
+			stmt.setDate(4, e.getHireDate());
 			stmt.executeQuery();
 			
 		} catch (Exception e1) {

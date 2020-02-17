@@ -1,6 +1,6 @@
 package chapter14.bean;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Employee {
 	private int eno;
