@@ -1,0 +1,23 @@
+-- data type
+-- number
+-- number(precision, sacle)
+-- ex) number (5, 2)
+--     345.12
+-- ex) number (3)
+--     566
+-- ex) number
+--     최대표현값 가능
+       
+-- varchar2
+-- varchar2(lengthByte)
+-- ex) varchar2(3)
+-- '', 'a', 'ab', 'abc', '한'
+
+-- char
+-- char(lengthByte)
+-- ex) char(3)
+-- '   ', 'a  ', 'ab ', 'abc'
+
+-- date
+-- ex) date
+-- 년월일시분초 
