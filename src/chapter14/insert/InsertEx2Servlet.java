@@ -2,6 +2,7 @@ package chapter14.insert;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -75,8 +76,54 @@ public class InsertEx2Servlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// 파라미터에서 받은 값으로 employee 하나 만들기
+		String eno = request.getParameter("eno");
+		String ename = request.getParameter("ename");
+		String job = request.getParameter("job");
+		String hireDate = request.getParameter("hireDate");
+		
+		Employee e = new Employee();
+		e.setEno(Integer.parseInt(eno));
+		e.setEname(ename);
+		e.setJob(job);
+		e.setHireDate(java.sql.Date.valueOf(hireDate));
+		
+		// db 에 추가
+		addEmployee(e);
+		
+		// forward or redirect
 		doGet(request, response);
+		
+	}
+
+	private void addEmployee(Employee e) {
+		String sql = "INSERT INTO emp_copy "
+				+ "(eno, ename, job, hireDate) "
+				+ "VALUES "
+				+ "(?, ?, ?, ?) ";
+		
+		try (
+			Connection con = DBCP.getConnection();
+			PreparedStatement stmt = con.prepareStatement(sql);
+		) {
+			stmt.setInt(1, e.getEno());
+			stmt.setString(2, e.getEname());
+			stmt.setString(3, e.getJob());
+			stmt.setDate(4, (java.sql.Date) e.getHireDate());
+			stmt.executeQuery();
+			
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		
 	}
 
 }
+
+
+
+
+
+
+
