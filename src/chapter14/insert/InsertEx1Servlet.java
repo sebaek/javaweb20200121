@@ -2,6 +2,7 @@ package chapter14.insert;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -73,8 +74,55 @@ public class InsertEx1Servlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// 데이터를 파라미터에서 받아서
+		String dno = request.getParameter("dno");
+		String dname = request.getParameter("dname");
+		String loc = request.getParameter("loc");
+		
+		Department d = new Department();
+		d.setDno(Integer.parseInt(dno));
+		d.setDname(dname);
+		d.setLoc(loc);
+		
+		// db에 insert
+		addDepartment(d);
+		
+		// view로 forward
 		doGet(request, response);
+		
+	}
+
+	private void addDepartment(Department d) {
+		String sql = "INSERT INTO dept_copy "
+				+ "(dno, dname, loc) "
+				+ "VALUES "
+				+ "(?, ?, ?) ";
+		
+		try (
+			Connection con = DBCP.getConnection();
+			PreparedStatement stmt = con.prepareStatement(sql);
+		) {
+			stmt.setInt(1, d.getDno());
+			stmt.setString(2, d.getDname());
+			stmt.setString(3, d.getLoc());
+			
+			int cnt = stmt.executeUpdate();
+			
+			if (cnt != 1) {
+				System.out.println("부서 입력중 문제 발생.");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }
+
+
+
+
+
+
+

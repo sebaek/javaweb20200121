@@ -20,7 +20,12 @@ table {
 <body>
 	<h1>부서 추가</h1>
 	<div>
-		<form></form>
+		<form method="post">
+		<input name="dno" type="number" placeholder="부서번호"><br>
+		<input name="dname" placeholder="부서명"><br>
+		<input name="loc" placeholder="위치"><br>
+		<input type="submit">
+		</form>
 	</div>
 	<h1>부서 목록</h1>
 	<div>
