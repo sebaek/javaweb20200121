@@ -31,12 +31,14 @@ table {
 	<div>
 		<table>
 			<tr>
+				<th>No</th>
 				<th>부서번호</th>
 				<th>부서명</th>
 				<th>위치</th>
 			</tr>
-			<c:forEach items="${departments }" var="dept">
+			<c:forEach items="${departments }" var="dept" varStatus="status">
 				<tr>
+					<td>${status.count }</td>
 					<td>${dept.dno }</td>
 					<td>${dept.dname }</td>
 					<td>${dept.loc }</td>
